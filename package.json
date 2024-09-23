@@ -1,0 +1,20 @@
+{
+  "name": "react-native-custom-refresh-controller",
+  "version": "1.0.2",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "peerDependencies": {
+    "react-native": "^0.75.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.25.6",
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7"
+  }
+}
