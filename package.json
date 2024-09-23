@@ -5,9 +5,43 @@
   "scripts": {
     "build": "babel src --out-dir lib"
   },
-  "author": "",
+  "author": {
+    "name": "Shanu T Thankachan",
+    "email": "shanu.t.thankachan@gmail.com",
+    "url": "https://github.com/shanutthankachan"
+  },
+  "bugs": {
+    "url": "https://github.com/shanutthankachan/React-Native-Custome-Refresh-Controller/issues"
+  },
+  "homepage": "https://github.com/shanutthankachan/React-Native-Custome-Refresh-Controller#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shanutthankachan/React-Native-Custome-Refresh-Controller.git"
+  },
   "license": "ISC",
-  "description": "",
+  "keywords": [
+    "React Native",
+    "Refresh Control",
+    "Custom Pull-to-Refresh",
+    "React Native UI",
+    "Swipe Refresh",
+    "Custom Refresh Animation",
+    "Cross-Platform Refresh",
+    "React Native Components",
+    "Refresh Controller",
+    "Pull Down Refresh",
+    "Custom UI Components",
+    "React Native ScrollView",
+    "React Native FlatList",
+    "Customizable Refresh Control",
+    "React Native Package",
+    "Pull to Refresh Animation",
+    "React Native Swipe Gesture",
+    "Refresh Indicator",
+    "Mobile App Development",
+    "UI/UX Enhancements"
+  ],
+  "description": "A simple pull-to-refresh component for React Native that works without ScrollView or FlatList.",
   "peerDependencies": {
     "react-native": "^0.75.3"
   },
