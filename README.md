@@ -6,7 +6,7 @@ A simple pull-to-refresh component for React Native that works without ScrollVie
 
 ```bash
 npm install react-native-custom-refresh-controller
-
+```
 
 # Getting started 🚀
 
