@@ -19,27 +19,27 @@ const CustomRefreshController = ({
           pullDown.setValue(gestureState.dy); // Update the position as the user pulls down
         }
       },
-      onPanResponderRelease: (_, gestureState) => {
-        if (gestureState.dy > 100 && !refreshing) { // Threshold for triggering refresh
-          handleRefresh();
-        } else {
-          resetPullDown();
+      onPanResponderRelease: async (_, gestureState) => {
+        if (gestureState.dy > 100 && !refreshing) {
+          await handleRefresh(); // Await the refresh handler
         }
-      },
+        resetPullDown();
+      }
     })
   ).current;
 
-  const handleRefresh = () => {
+  const handleRefresh = async () => {
     setRefreshing(true);
 
-    // Trigger the passed onRefresh function
     if (onRefresh) {
-      onRefresh().finally(() => {
+      try {
+        await onRefresh(); // Await onRefresh if provided
+      } finally {
         setRefreshing(false);
         resetPullDown();
-      });
+      }
     } else {
-      // If no onRefresh is provided, simulate a delay and stop refreshing
+      // Simulate delay if no onRefresh function is provided
       setTimeout(() => {
         setRefreshing(false);
         resetPullDown();
@@ -62,7 +62,7 @@ const CustomRefreshController = ({
         <View style={[styles.loaderContainer, { backgroundColor: loaderBackground }]}>
           <ActivityIndicator size={loaderSize} color={loaderColor} />
         </View>
-      )}  
+      )}
     </View>
   );
 };

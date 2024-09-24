@@ -13,9 +13,11 @@ npm install react-native-custom-refresh-controller
 ```js
 import CustomRefreshController from 'react-native-custom-refresh-controller';
 
- const handleRefresh = () => {
+const handleRefresh = () => {
     return new Promise(resolve => {
-      resolve()
+      setTimeout(() => {
+        resolve();
+      }, 3000);
     });
   };
 
